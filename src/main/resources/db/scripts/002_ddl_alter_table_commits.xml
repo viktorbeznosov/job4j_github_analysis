@@ -10,6 +10,9 @@
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
+            <column name="commit_hash" type="varchar(40)">
+                <constraints nullable="true"/>
+            </column>
             <column name="message" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
@@ -30,6 +33,11 @@
                 referencedTableName="repositories"
                 referencedColumnNames="id"
                 constraintName="fk_commits_repository"/>
+
+        <addUniqueConstraint
+                tableName="commits"
+                columnNames="commit_hash"
+                constraintName="unique_commit_hash"/>
     </changeSet>
 
 </databaseChangeLog>

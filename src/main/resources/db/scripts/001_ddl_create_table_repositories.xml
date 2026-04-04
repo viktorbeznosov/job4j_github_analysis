@@ -17,6 +17,11 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+
+        <addUniqueConstraint
+                tableName="repositories"
+                columnNames="name"
+                constraintName="unique_repository_name"/>
     </changeSet>
 
 </databaseChangeLog>
