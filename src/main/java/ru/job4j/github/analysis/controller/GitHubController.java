@@ -3,7 +3,6 @@ package ru.job4j.github.analysis.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.job4j.github.analysis.dto.CommitResponseDto;
 import ru.job4j.github.analysis.model.Commit;
 import ru.job4j.github.analysis.model.Repository;
 import ru.job4j.github.analysis.service.CommitService;
